@@ -1,0 +1,157 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    margin-bottom: 60px; /* Ύψος του footer + κάποιο περιθώριο */
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.custom-title {
+    font-family: Arial, sans-serif; /* Χρήση της γραμματοσειράς Arial */
+    font-size: 3rem; /* Μέγεθος γραμματοσειράς τίτλου */
+    font-weight: bold;
+    color: #007bff; /* Χρώμα γραμματοσειράς τίτλου */
+}
+
+footer.custom-footer {
+    background-color: #c1b8b8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.stay-connected {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+    .stay-connected span {
+        margin-right: 10px;
+    }
+
+    .stay-connected ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .stay-connected li {
+        margin-left: 10px;
+    }
+
+    .stay-connected img {
+        width: 24px;
+        height: 24px;
+    }
+
+.custom-bg-blue {
+    background-color: #cce5ff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.custom-title1 {
+    font-family: 'Candara', sans-serif;
+    font-weight: bold;
+    color: #004085;
+}
+
+.navbar-nav .nav-item:nth-child(1) a.nav-link,
+.navbar-nav .nav-item:nth-child(2) a.nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s;
+    color: #343a40;
+}
+
+    .navbar-nav .nav-item:nth-child(1) a.nav-link:hover,
+    .navbar-nav .nav-item:nth-child(2) a.nav-link:hover {
+        color: #007bff !important;
+    }
+
+.sidebar {
+    background-color: #226ab7; /* Blue background color */
+    color: #fff; /* Text color */
+}
+
+.submenu {
+    display: none; /* Hide submenu by default */
+    margin-left: 20px; /* Indent submenu items */
+}
+
+.submenu-active {
+    display: block; /* Show submenu when active */
+}
+
+.submenu-toggle::before {
+    content: "\00BB"; /* Right chevron symbol */
+    display: inline-block;
+    margin-right: 10px; /* Spacing between symbol and text */
+}
+
+.btn-logout {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto; /* Footer will always stick to the bottom */
+    background-color: #f8f9fa; /* Light gray background color */
+    padding: 10px 0;
+}
+
+    .footer.custom-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px; /* Ύψος του footer */
+        border-top: 1px solid #ddd; /* Πάνω όριο του footer */
+        text-align: center;
+        padding-top: 20px; /* Ανασηκώνει το περιεχόμενο για να μην είναι πολύ κοντά στο κάτω όριο */
+        font-size: 0.875rem; /* Μικρότερη γραμματοσειρά για το footer */
+    }
+
+.top-area {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.top-area a {
+    color: white;
+    margin: 0 10px;
+ }
+
+.img-container {
+    position: absolute;
+    top: 80px;
+    right: 80px;
+}
+   

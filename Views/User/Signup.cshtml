@@ -1,0 +1,133 @@
+﻿@model SummerWebinarApp.DTO.UserSignupDTO
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Top area -->
+            <div class="col-12 top-area">
+                <h2>SummerWebinars</h2>
+                <p>
+                    <a href="@Url.Action("Index", "Home")">Home</a> |
+                    <a href="@Url.Action("Mission", "Home")">Mission</a> |
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <main class="w-75 mt-5 p-3 border border-primary mx-auto rounded-3">
+            <h2 class="text-center text-primary fw-bold mb-4">Account Registration</h2>
+            <form asp-controller="User" asp-action="Signup" method="POST">
+                <div class="row mb-3">
+                    <label for="username" class="col-md-1 col-form-label text-start">Username</label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" name="username" id="username"
+                               placeholder="Enter username" />
+                    </div>
+                    <label for="password" class="col-md-1 col-form-label text-start">Password</label>
+                    <div class="col-md-5">
+                        <input type="password" class="form-control" name="password" id="password"
+                               placeholder="Enter password" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="firstname" class="col-md-1 col-form-label text-start">Firstname</label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" name="firstname" id="firstname"
+                               placeholder="Enter firstname" />
+                    </div>
+                    <label for="lastname" class="col-md-1 col-form-label text-start">Lastname</label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" name="lastname" id="lastname"
+                               placeholder="Enter lastname" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="email" class="col-md-1 col-form-label text-start">Email</label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" name="email" id="email"
+                               placeholder="Enter email" />
+                    </div>
+                    <label for="phonenumber" class="col-md-1 col-form-label text-start">Phone</label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" name="phonenumber" id="phonenumber"
+                               placeholder="Enter phone number" />
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="institution" class="col-md-1 col-form-label text-end">Institution</label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control" name="institution" id="institution"
+                               placeholder="Enter institution" />
+                    </div>
+                    <label for="role" class="col-md-1 col-form-label text-start">Role</label>
+                    <div class="col-md-5">
+                        <select class="form-select" aria-label="Default select example" name="userRole" id="role">
+                            <option selected>Select Role</option>
+                            <option value="Teacher">Teacher</option>
+                            <option value="Student">Student</option>
+                            <option value="Admin">Admin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-md-1 col-md-5 d-grid">
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+    </div>
+
+    <div>
+        @if (ViewData["ErrorArray"] is not null)
+        {
+            var errorArray = ViewData["ErrorArray"] as List<Error>;
+            @if (errorArray != null)
+            {
+                @foreach (var error in errorArray)
+                {
+                    <div>
+                        <p>@error.Message</p>
+                    </div>
+                }
+            }
+        }
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" integrity="sha512-KgSlvW8PCXag+dZnAde53zcA1eRHLJOz3eU9jwF09fEC6T0kY54A8Qz4v6b7DsfMWBv5IyL8eJgbP1HK/Z+esw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+<footer class="border-top footer text-muted custom-footer">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div style="font-weight: bold; color: black;">
+            &copy; 2024 - SummerWebinarApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+        <div class="stay-connected d-flex align-items-center">
+            <span><strong>Contact Us:</strong></span>
+            <ul class="list-inline mb-0 ml-2">
+                <li class="list-inline-item"><a href="https://www.facebook.com/YourFacebookPage" target="_blank"><img src="~/img/facebook-icon.png" alt="Facebook"></a></li>
+                <li class="list-inline-item"><a href="https://www.linkedin.com/company/aueb-coding-factory/posts/?feedView=all" target="_blank"><img src="~/img/linkedin-icon.png" alt="LinkedIn"></a></li>
+                <li class="list-inline-item"><a href="https://www.instagram.com/aueb.gr/" target="_blank"><img src="~/img/instagram-icon.png" alt="Instagram"></a></li>
+
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</html>
