@@ -1,14 +1,4 @@
-Θα βρείτε το τελικό μου project για το Coding Factory 5 στο github στο λινκ που ακολουθεί
-
-https://github.com/DespoinaDr/SummerWebinar-Final-Project.git
-
-Έχω επιλέξει να δουλέψω με C# και mvc. Αφορά Summer Webinars,
-όπου οι χρήστες (μαθητές και καθηγητές) μπορούν να μπουν και να κάνουν Sign Up 
-(επιλέγοντας τον ρόλο τους).
-Αφού γίνει Sign Up, ο κάθε χρήστης κάνει login και αναλόγως τον ρόλο χρήστη που έχει 
-εμφανίζεται και διαφορετική σελίδα. 
-Στη σελίδα τους οι καθηγητές, πηγαίνοντας στο My Webinars μπορούν να δηλώσουν ποιά γλώσσα 
-προγραμματισμού ή framework θα διδάξουν. Στην ίδια σελίδα μπορούν επίσης αφού έχουν κάνει 
-κάποια ή κάποιες εγγραφές σεμιναρίων να κάνουν edit τα σεμινάρια που έχουν ήδη φτιάξει.
-Στη σελίδα των μαθητών από την άλλη εμφανίζονται οι πίνακες μρ τα σεμινάρια και τους καθηγητής
-όπως αυτή προκύπτει από την κάθε εισαγωγή καθηγητη. 
+I have chosen to work with C# and MVC. The project is about Summer Webinars, where users (students and teachers) can sign up by selecting their role. 
+After signing up, each user logs in and sees a different page depending on their role. On their page, teachers can go to "My Webinars" to declare which programming language or framework they will teach.
+On the same page, they can also edit the webinars they have already created after registering one or more seminars. 
+On the students' page, tables with the seminars and teachers are displayed as derived from each teacher's entry.
